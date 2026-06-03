@@ -6,8 +6,7 @@ const resultadoTemperatura = document.getElementById("resultadoTemperatura");
 const convertirTemperatura = (grados, escala) => {
     if (escala === "C") {
         const fahrenheit = (grados * 9) / 5 + 32;
-        return `${fahrenheit.toFixed(1)}°F`;
-        //return fahrenheit.toFixed(1) + "°F";
+        return `${fahrenheit.toFixed(1)}°F`;        
     } else if (escala === "F") {
         const celsius = ((grados - 32) * 5) / 9;
         return `${celsius.toFixed(1)}°C`;
