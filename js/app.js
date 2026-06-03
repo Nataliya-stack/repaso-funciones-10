@@ -1,3 +1,8 @@
+const inputGrados = document.getElementById("inputGrados");
+const selectEscala = document.getElementById("selectEscala");
+const btnConvertir = document.getElementById("btnConvertir");
+const resultadoTemperatura = document.getElementById("resultadoTemperatura");
+
 const convertirTemperatura = (grados, escala) => {
     if (escala === "C") {
         const fahrenheit = (grados * 9) / 5 + 32;
@@ -10,11 +15,6 @@ const convertirTemperatura = (grados, escala) => {
         return "Error: Escala no válida";
     }
 };
-
-const inputGrados = document.getElementById("inputGrados");
-const selectEscala = document.getElementById("selectEscala");
-const btnConvertir = document.getElementById("btnConvertir");
-const resultadoTemperatura = document.getElementById("resultadoTemperatura");
 
 btnConvertir.addEventListener("click", () => {
     const grados = parseFloat(inputGrados.value); 
@@ -34,28 +34,3 @@ btnConvertir.addEventListener("click", () => {
     inputGrados.value = "";
     inputGrados.focus();
 });
-
-////////////////////////////////////////////////////////////////////////////////
-//const miFuncion = (cadena) => cadena.length;
-
-//const inicializarContador = (idInput, idBtn, idResultado) => {
-    //const inputEl = document.getElementById(idInput);
-    //const btnEl = document.getElementById(idBtn);
-    //const resultEl = document.getElementById(idResultado);
-
-    //if (!inputEl || !btnEl || !resultEl) return;   
-
-    //btnEl.addEventListener("click", () => {
-        //const texto = inputEl.value.trim();
-
-        //if (texto === "") {
-            //resultEl.textContent = "Error: ¡El campo no puede estar vacío!";
-            //return; 
-        //}
-
-        //const longitud = miFuncion(texto); 
-        //resultEl.textContent = "Longitud del texto: " + longitud;
-    //});
-//};
-
-//inicializarContador("input", "btn", "resultado");
