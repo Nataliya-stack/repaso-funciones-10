@@ -4,15 +4,19 @@ const btnConvertir = document.getElementById("btnConvertir");
 const resultadoTemperatura = document.getElementById("resultadoTemperatura");
 
 const convertirTemperatura = (grados, escala) => {
+    let resultado = ""; 
+
     if (escala === "C") {
         const fahrenheit = (grados * 9) / 5 + 32;
-        return `${fahrenheit.toFixed(1)}°F`;        
+        resultado = `${fahrenheit.toFixed(1)}°F`; 
     } else if (escala === "F") {
         const celsius = ((grados - 32) * 5) / 9;
-        return `${celsius.toFixed(1)}°C`;
+        resultado = `${celsius.toFixed(1)}°C`; 
     } else {
-        return "Error: Escala no válida";
+        resultado = "Error: Escala no válida"; 
     }
+
+    return resultado; 
 };
 
 btnConvertir.addEventListener("click", () => {
